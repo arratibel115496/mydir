@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<project name="Hello" default="compile">
+    	<target name="compile" description="compilar el código java a un archivo class">
+		<mkdir dir="ant"/>
+		<javac srcdir="src/main/java/es/unavarra/gpi2/" destdir="target/classes/es/unavarra/gpi2/"/>
+    	</target>
+   
+</project>

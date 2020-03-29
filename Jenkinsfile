@@ -7,7 +7,10 @@ pipeline {
         }
         stage('Test') {
             steps {
+		sh 'mvn compile'
                 sh 'mvn test'
+		sh 'mvn validate'
+		sh 'mvn verify'
             }       
         }
         stage('Deliver') {

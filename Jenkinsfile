@@ -1,11 +1,9 @@
 pipeline {
 	
     stages {
-	stage('git') {
- 		steps { git url: 'https://github.com/arratibel115496/mydir.git' }
-	}
         stage('Build') {
             steps {
+		git url: 'https://github.com/arratibel115496/mydir.git'
                 sh 'mvn -B -DskipTests clean package'
 		echo 'Vamos a compilar Arduino'
 		dir('PracticaArduino/Arduino'){ sh 'make -f Makefile-Linux.mk' }
@@ -19,11 +17,6 @@ pipeline {
 			sh './gradlew tasks'
 			sh './gradlew check'
 		}
-            }
-        }
-        stage('Deliver') {
-            steps {
-                sh './jenkins/scripts/deliver.sh'
             }
         }
     }

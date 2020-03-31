@@ -1,9 +1,7 @@
 pipeline {
 	
     stages {
-	stage('git') {
- 		steps { git url: 'https://github.com/arratibel115496/mydir.git' }
-	}
+	
         stage('Build') {
             steps {
                 sh 'mvn -B -DskipTests clean package'

@@ -2,7 +2,6 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-		git url: 'https://github.com/arratibel115496/mydir.git'
                 sh 'mvn -B -DskipTests clean package'
 		echo 'Vamos a compilar Arduino'
 		dir('PracticaArduino/Arduino') {

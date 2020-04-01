@@ -13,7 +13,7 @@ pipeline {
 			steps {
 				echo 'Vamos a compilar Android'
 				dir('PracticaAndroid/FirstApp') {
-					sh './gradlew tasks'
+					sh './gradlew assembleDebug'
 					sh './gradlew check'
 				}
 			}

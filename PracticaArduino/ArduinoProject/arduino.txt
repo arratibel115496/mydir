@@ -1,0 +1,17 @@
+    1  29/01/20 11:47:40 exit
+   48  12/02/20 15:48:34 sudo apt-get install gcc-avr 8.3.0
+   70  12/02/20 17:12:37 sudo add-apt-repository ppa:git-core/ppa
+   71  12/02/20 17:12:56 sudo apt-get update && sudo apt-get upgrade
+   72  12/02/20 17:13:26 sudo apt-get git
+   73  12/02/20 17:13:34 sudo apt-get install git
+   74  12/02/20 17:15:01 sudo apt-get install binutils avr-libc avrdude
+   75  12/02/20 17:15:24 avrdude -v
+   76  12/02/20 17:15:33 avr-gcc -v
+  138  12/02/20 18:01:13 unzip Bare-Arduino-Project-master -d ArduinoProject
+  139  12/02/20 18:03:05 cd ArduinoProject/
+  140  12/02/20 18:03:08 make
+  141  12/02/20 18:03:16 make -f Makefile-Linux.mk 
+  142  12/02/20 18:05:40 history > arduino.txt
+
+
+Para poder ejecutar nuestros ficheros de Arduino sin necesidad del IDE de Arduino, debemos ubicar nuestros ficheros en La carpeta ArduinoProject, y ejecutar el comando make -f Makefile-Linux.k

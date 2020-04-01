@@ -24,6 +24,7 @@ pipeline {
 			dir('simple') {
 				sh 'mvn verify'
 				sh 'mvn site'
+				}
 			}
 		}
 	}

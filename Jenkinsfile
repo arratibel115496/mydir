@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
 		echo 'Vamos a compilar Arduino'
-		dir('PracticaArduino/Arduino') {
+		dir('PracticaArduino/ArduinoProject') {
 			sh 'make -f Makefile-Linux.mk' 
 		}
 		echo 'Vamos a compilar Simple maven'

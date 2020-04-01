@@ -3,7 +3,6 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'mvn -B -DskipTests clean package'
 		echo 'Vamos a compilar Arduino'
 		dir('PracticaArduino/Arduino') {
 			sh 'make -f Makefile-Linux.mk' 

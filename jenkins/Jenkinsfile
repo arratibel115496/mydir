@@ -4,7 +4,7 @@ pipeline {
 		stage('Arduino') {
 			steps {
 				echo 'Vamos a compilar Arduino'
-				dir('PracticaArduino/ArduinoProject') {
+				dir('../PracticaArduino/ArduinoProject') {
 					sh 'make -f Makefile-Linux.mk' 
 					}
 		            	}
@@ -12,7 +12,7 @@ pipeline {
 		stage('Android') {
 			steps {
 				echo 'Vamos a compilar Android'
-				dir('PracticaAndroid') {
+				dir('../PracticaAndroid/FirstApp') {
 					sh './gradlew tasks'
 					sh './gradlew check'
 				}
@@ -21,7 +21,7 @@ pipeline {
 		stage('Maven') {
 			steps {
 			echo 'Vamos a compilar Simple maven'
-			dir('simple') {
+			dir('../simple') {
 				sh 'mvn verify'
 				sh 'mvn site'
 				}

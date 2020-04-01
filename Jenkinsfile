@@ -9,6 +9,7 @@ pipeline {
 		}
 		echo 'Vamos a compilar Android'
 		dir('PracticaAndroid') {
+			sh 'chmod +x gradlew'
 			sh './gradlew tasks'
 			sh './gradlew check'
 		}
